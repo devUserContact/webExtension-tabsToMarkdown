@@ -5,12 +5,19 @@
 
   "description": "test",
 
-  "permissions": ["tabs"],
   "browser_action": {
     "default_title": "Tabs to Markdown",
     "default_popup": "popup/index.html"
   },
-
+  "permissions": ["tabs", "downloads", "downloads.open"],
+  "commands": {
+    "convert-tabs-to-markdown": {
+      "suggested_key": {
+        "default": "Ctrl+Shift-M"
+      },
+      "description": "Convert all open tabs to markdown"
+    }
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
