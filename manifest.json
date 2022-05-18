@@ -1,22 +1,20 @@
 {
-	"manifest_version": 2,
-	"name": "firefoxExtention-tabsToMarkdown",
-	"version": "1.0",
-	
-	"description": "test",
+  "manifest_version": 2,
+  "name": "firefoxExtention-tabsToMarkdown",
+  "version": "1.0",
 
-	"permissions": [
-	  "tabs"
-	],
-	"browser_action": {
-		"default_title": "Tabs to Markdown",
-		"default_popup": "popup/index.html"
-	},
+  "description": "test",
 
-	"content_scripts": [
-		{
-			"matches": ["<all_urls>"],
-			"js": ["index.js"]
-		}
-	]
+  "permissions": ["tabs"],
+  "browser_action": {
+    "default_title": "Tabs to Markdown",
+    "default_popup": "popup/index.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["index.js"]
+    }
+  ]
 }
