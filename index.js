@@ -9,9 +9,9 @@ function listTabs() {
 window.onload = function () {
   const btn = document.getElementById("exeButton");
   btn.onclick = listTabs;
-  browser.commands.onCommand.addListener(function (command){
-    if (command === "convert-tabs-to-markdown") {
-      listTabs;
-    }
-  }) 
 };
+browser.commands.onCommand.addListener(function (command){
+  if (command === "convert-tabs-to-markdown") {
+    listTabs();
+  }
+}) 

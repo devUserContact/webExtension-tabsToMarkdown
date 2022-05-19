@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "firefoxExtention-tabsToMarkdown",
+  "name": "firefoxExtension-tabsToMarkdown",
   "version": "1.0",
 
   "description": "test",
@@ -13,7 +13,7 @@
   "commands": {
     "convert-tabs-to-markdown": {
       "suggested_key": {
-        "default": "Ctrl+Shift-M"
+        "default": "Ctrl+Alt+M"
       },
       "description": "Convert all open tabs to markdown"
     }
