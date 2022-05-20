@@ -4,15 +4,25 @@ function listTabs() {
     for (const tab of tabs) {
       tabsArray.push({
         key: tab.title,
-        value: tab.url
+        value: tab.url,
       });
     }
-    console.table(tabsArray);
-    //for (const counter of tabsArrayTitle.length){
-    //}
-    //    var data = new Blob([tabs.url], {
-    //      type: "text/plain",
-    //    });
+    let tabsMarkdown = [];
+    let counter = 1;
+    for (var tabObj of tabsArray) {
+      tabsMarkdown.push(
+        `
+          [${tabObj.key}][${counter++}]
+        `
+      );
+    }
+    //  console.table(tabsArray)
+    console.table(tabsMarkdown);
+    function generateTabsMarkdown(tabsMarkdownFull) {
+      var data = new Blob([tabsMarkdownFull], {
+        type: "text/plain",
+      });
+    }
   });
 }
 
