@@ -1,9 +1,9 @@
-function listTabs() {
+export function listTabs() {
   let tabsArray = [];
   let counter = 0;
   browser.tabs.query({ currentWindow: true }).then((tabs) => {
     for (const tab of tabs) {
-      counter++
+      counter++;
       tabsArray.push({
         key: `[${tab.title}][${counter}]`,
         value: `[${counter}]:[${tab.url}]`,
@@ -25,8 +25,8 @@ window.onload = function () {
   const btn = document.getElementById("exeButton");
   btn.onclick = listTabs;
 };
-browser.commands.onCommand.addListener(function (command) {
-  if (command === "convert-tabs-to-markdown") {
-    listTabs();
-  }
-});
+//browser.commands.onCommand.addListener(function (command) {
+//  if (command === "convert-tabs-to-markdown") {
+//    listTabs();
+//  }
+//});

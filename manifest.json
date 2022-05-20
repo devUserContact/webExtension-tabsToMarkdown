@@ -22,6 +22,9 @@
       "description": "Convert all open tabs to markdown"
     }
   },
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
