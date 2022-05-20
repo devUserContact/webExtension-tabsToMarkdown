@@ -1,23 +1,18 @@
 function listTabs() {
   let tabsArray = [];
+  let counter = 0;
   browser.tabs.query({ currentWindow: true }).then((tabs) => {
     for (const tab of tabs) {
+      counter++
       tabsArray.push({
-        key: tab.title,
-        value: tab.url,
+        key: `[${tab.title}][${counter}]`,
+        value: `[${counter}]:[${tab.url}]`,
+        id: counter,
       });
     }
     let tabsMarkdown = [];
-    let counter = 1;
-    for (var tabObj of tabsArray) {
-      tabsMarkdown.push(
-        `
-          [${tabObj.key}][${counter++}]
-        `
-      );
-    }
-    //  console.table(tabsArray)
-    console.table(tabsMarkdown);
+    console.table(tabsArray);
+    //console.table(tabsMarkdown);
     function generateTabsMarkdown(tabsMarkdownFull) {
       var data = new Blob([tabsMarkdownFull], {
         type: "text/plain",
