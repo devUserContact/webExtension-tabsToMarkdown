@@ -7,7 +7,7 @@ export function listTabs() {
       counter++;
       tabsArray.push({
         key: `[${tab.title}][${counter}]`,
-        value: `[${counter}]:[${tab.url}]`,
+        value: `[${counter}]:${tab.url}`,
         id: counter,
       });
     }
