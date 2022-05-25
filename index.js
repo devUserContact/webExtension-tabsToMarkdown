@@ -1,7 +1,7 @@
 export function listTabs() {
+  //get tab data from browser
   let tabsArray = [];
   let counter = 0;
-
   browser.tabs.query({ currentWindow: true }).then((tabs) => {
     for (const tab of tabs) {
       counter++;
@@ -11,15 +11,17 @@ export function listTabs() {
         id: counter,
       });
     }
-    let tabsMarkdown = [];
 
     // creating the markdown string
-
+    let tabsMarkdown = [];
     const docTitle = document.getElementById("titleInput").value;
     tabsMarkdown.push(`# ${docTitle}`);
     for (var tabEntry of tabsArray) {
-      tabsMarkdown.push(tabEntry.key);
-      tabsMarkdown.push("\n");
+      if (tabEntry.id === tabsArray.length) {
+        tabsMarkdown.push(`${tabEntry.key}`);
+      } else {
+        tabsMarkdown.push(`${tabEntry.key}\n`);
+      }
     }
     tabsMarkdown.push("___");
     for (var tabEntry of tabsArray) {
