@@ -14,7 +14,9 @@ export function listTabs() {
     let tabsMarkdown = [];
 
     // creating the markdown string
-    tabsMarkdown.push("# docTitle");
+
+    const docTitle = document.getElementById("titleInput").value;
+    tabsMarkdown.push(`# ${docTitle}`);
     for (var tabEntry of tabsArray) {
       tabsMarkdown.push(tabEntry.key);
       tabsMarkdown.push("\n");
@@ -26,17 +28,16 @@ export function listTabs() {
     let tabsMarkdownComplete = tabsMarkdown.join("\n");
 
     // creating md file and text blob
-    let dlLink = document.createElement('a');
-    dlLink.download = 'test.md'
+    let dlLink = document.createElement("a");
+    dlLink.download = `${docTitle}.md`;
     let markdownDoc = new Blob([tabsMarkdownComplete], {
       type: "text/plain",
-    }); 
+    });
     dlLink.href = URL.createObjectURL(markdownDoc);
     dlLink.click();
   });
 }
 window.onload = function () {
   const btn = document.getElementById("exeButton");
-  const input = document.getElementById("titleInput");
   btn.onclick = listTabs;
 };
