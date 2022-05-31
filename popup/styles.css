@@ -18,6 +18,8 @@ body {
   height: 45%;
   font-size: 22px;
   text-align: center;
+  border: solid black 1px;
+  border-radius: 4px;
 }
 .bttn {
   display: grid;
@@ -27,6 +29,8 @@ body {
   border: none;
   font-size: 22px;
   text-align: center;
+  border: solid black 1px;
+  border-radius: 4px;
 }
 .spacer {
   display: grid;
