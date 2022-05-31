@@ -6,8 +6,8 @@
   "description": "Converts all open tabs into a list of links in a Markdown file.",
   "author": "MaxwellWine <developer.user.contact@protonmail.com>",
   "icons": {
-    "48": "icons/icon48.png",
-    "96": "icons/icon96.png"
+    "48": "icons/icon.png",
+    "96": "icons/icon.png"
   },
   "browser_action": {
     "default_title": "Tabs to Markdown",
