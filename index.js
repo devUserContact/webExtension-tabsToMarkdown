@@ -14,7 +14,14 @@ export function listTabs() {
 
     // creating the markdown string
     let tabsMarkdown = [];
-    const docTitle = document.getElementById("titleInput").value;
+
+    let docTitle = document.getElementById("titleInput").value;
+    let currentDate = `${
+      new Date().getMonth() + 1
+    }-${new Date().getDate()}-${new Date().getFullYear()}`;
+    if (docTitle === "") {
+      docTitle = `tabsToMarkdown_${currentDate}`;
+    }
     tabsMarkdown.push(`# ${docTitle}`);
     for (var tabEntry of tabsArray) {
       if (tabEntry.id === tabsArray.length) {
