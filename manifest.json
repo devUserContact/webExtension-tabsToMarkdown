@@ -11,19 +11,7 @@
   },
   "browser_action": {
     "default_title": "Tabs to Markdown",
-    "default_popup": "popup/index.html",
-    "theme_icons": [
-      {
-        "light": "icons/icon-dark-48.png",
-        "dark": "icons/icon-light-48.png",
-        "size": 48
-      },
-      {
-        "light": "icons/icon-light-96.png",
-        "dark": "icons/icon-dark-96.png",
-        "size": 96
-      }
-    ]
+    "default_popup": "popup/index.html"
   },
   "permissions": ["contextMenus", "tabs", "downloads", "downloads.open"],
   "commands": {
