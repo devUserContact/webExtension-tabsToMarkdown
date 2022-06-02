@@ -22,6 +22,4 @@ $ web-ext run --verbose
 
 ---
 
----
-
 [1]: https://addons.mozilla.org/en-US/firefox/addon/tabs-to-markdown/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
