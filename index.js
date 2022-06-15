@@ -1,7 +1,6 @@
 export function listTabs() {
   let tabsArray = [];
   let counter = 0;
-
   function createCurrentDate() {
     let dateElement = [];
     dateElement.push(new Date().getMonth() + 1);
@@ -15,14 +14,11 @@ export function listTabs() {
       }
     }
     const newDateElement = dateElement.map(zeroPadding);
-
     let currentDate = `${newDateElement[0]}-${
       newDateElement[1]
     }-${new Date().getFullYear()}`;
-
     return currentDate;
   }
-
   browser.tabs.query({ currentWindow: true }).then((tabs) => {
     for (const tab of tabs) {
       counter++;
@@ -35,7 +31,6 @@ export function listTabs() {
     let tabsMarkdown = [];
     let docTitle = document.getElementById("titleInput").value;
     let date = createCurrentDate();
-
     if (docTitle === "") {
       docTitle = `tabsToMarkdown_${date}`;
     }
