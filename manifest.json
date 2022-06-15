@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Tabs to Markdown",
-  "version": "1.0",
+  "version": "1.1",
 
   "description": "Converts all open tabs into a list of links in a Markdown file.",
   "author": "Maxwell Wine <developer.user.contact@protonmail.com>",
