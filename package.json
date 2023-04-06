@@ -1,0 +1,12 @@
+{
+  "name": "firefoxExtension-tabsToMarkdown",
+  "version": "1.3.0",
+  "description": "This extension will convert all tabs open in the current window into a Markdown file.",
+  "main": "index.js",
+  "repository": "https://github.com/devUserContact/firefoxExtension-tabsToMarkdown",
+  "author": "Maxwell Wine",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.3"
+  }
+}
