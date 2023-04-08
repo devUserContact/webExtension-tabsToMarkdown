@@ -7,11 +7,10 @@ export function generateMardownDocument() {
         dateElement.push(new Date().getDate());
         function zeroPadding(dateNumber) {
             if (dateNumber < 10) {
-                dateNumber = parseInt(dateNumber.toString().padStart(2, '0'));
-                return dateNumber;
+                return dateNumber.toString().padStart(2, '0');
             }
             else {
-                return dateNumber;
+                return dateNumber.toString();
             }
         }
         const newDateElement = dateElement.map(zeroPadding);
