@@ -17,6 +17,7 @@
 - Use this command in the top directory
 
 ```bash
+$ cd dist
 $ web-ext run --verbose
 ```
 
