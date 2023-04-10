@@ -34,13 +34,16 @@ body {
   border-radius: 4px;
 }
 @media (prefers-color-scheme: dark) {
-  .container {
-    background-color: ;
-  }  
+  html,
+  body {
+    background-color: #404258;
+  }
   .text-input {
-    background-color: ;
+    background-color: #6B728E;
+    color: #F4EEE0;
   }  
   .bttn {
-    background-color: ;
+    background-color: #6B728E;
+    color: #F4EEE0;
   }  
 }
