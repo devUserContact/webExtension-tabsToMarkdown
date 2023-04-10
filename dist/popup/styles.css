@@ -33,3 +33,14 @@ body {
   border: solid black 1px;
   border-radius: 4px;
 }
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: ;
+  }  
+  .text-input {
+    background-color: ;
+  }  
+  .bttn {
+    background-color: ;
+  }  
+}
