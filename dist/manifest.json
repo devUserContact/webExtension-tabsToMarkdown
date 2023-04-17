@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Tabs to Markdown",
   "version": "1.3",
   "description": "Converts all open tabs into a list of links in a Markdown file.",
@@ -8,7 +8,7 @@
     "48": "icons/icon-48.png",
     "96": "icons/icon-96.png"
   },
-  "browser_action": {
+  "action": {
     "default_title": "Tabs to Markdown",
     "default_popup": "popup/index.html"
   },
@@ -16,13 +16,13 @@
   "commands": {
     "convert-tabs-to-markdown": {
       "suggested_key": {
-        "default": "Ctrl+Alt+M"
+        "default": "Ctrl+Shift+M"
       },
       "description": "Convert all open tabs to markdown"
     }
   },
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {

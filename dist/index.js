@@ -1,4 +1,4 @@
-export function generateMardownDocument() {
+function generateMardownDocument() {
     let tabsArray = [];
     let counter = 0;
     function createCurrentDate() {
@@ -17,7 +17,7 @@ export function generateMardownDocument() {
         let currentDate = `${newDateElement[0]}-${newDateElement[1]}-${new Date().getFullYear()}`;
         return currentDate;
     }
-    browser.tabs.query({ currentWindow: true }).then((tabs) => {
+    chrome.tabs.query({ currentWindow: true }).then((tabs) => {
         for (const tab of tabs) {
             counter++;
             tabsArray.push({
@@ -55,6 +55,9 @@ export function generateMardownDocument() {
         dlLink.click();
     });
 }
+
+window.generateMardownDocument = generateMardownDocument;
+
 window.onload = function () {
     const btn = document.getElementById('exeButton');
     btn.onclick = generateMardownDocument;
