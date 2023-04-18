@@ -18,7 +18,7 @@ export function generateMardownDocument() {
     return currentDate
   }
 
-  browser.tabs.query({ currentWindow: true }).then((tabs: any) => {
+  chrome.tabs.query({ currentWindow: true }).then((tabs: any) => {
     for (const tab of tabs) {
       counter++
       tabsArray.push({
