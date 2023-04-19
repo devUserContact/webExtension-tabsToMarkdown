@@ -1,6 +1,6 @@
 # [Tabs to Markdown][1]
 
-## A Firefox Extension that converts all open tabs into a list of links in a Markdown file.
+## A Web Extension that converts all open tabs into a list of links in a Markdown file.
 
 ### This extension can be useful for:
 
