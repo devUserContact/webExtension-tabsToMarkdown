@@ -45,6 +45,7 @@ export function generateMardownDocument() {
     for (const tabEntry of tabsArray) {
       tabsMarkdown.push(tabEntry.value)
     }
+    tabsMarkdown.push('\n')
     let tabsMarkdownComplete = tabsMarkdown.join('\n')
     let dlLink = document.createElement('a')
     dlLink.download = `${docTitle}.md`
