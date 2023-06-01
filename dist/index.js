@@ -46,6 +46,7 @@ export function generateMardownDocument() {
             tabsMarkdown.push(tabEntry.value);
         }
         let tabsMarkdownComplete = tabsMarkdown.join('\n');
+        tabsMarkdownComplete += '\n';
         let dlLink = document.createElement('a');
         dlLink.download = `${docTitle}.md`;
         let markdownDoc = new Blob([tabsMarkdownComplete], {
